@@ -1,0 +1,101 @@
+/* certifications.css */
+
+/* Style pour la section Certifications */
+.certifications {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 20px 0;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Chaque certification */
+.certification {
+    background-color: #ffffff;
+    padding: 1rem 1.5rem;
+    border-left: 5px solid #1E90FF;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Effet au survol */
+.certification:hover {
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Titres des certifications */
+.certification h3 {
+    margin-bottom: 0.5rem;
+    color: #1E90FF;
+    font-size: 1.5rem; /* Taille du titre des certifications */
+}
+
+/* Description de la certification */
+.certification p {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Bouton de la certification */
+.certification .btn {
+    background-color: #1E90FF;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.certification .btn:hover {
+    background-color: #187bcd;
+    transform: translateY(-2px);
+}
+
+/* Réponse au survol du bouton */
+.certification .btn:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(30, 144, 255, 0.5);
+}
+
+/* Animation du fade-in */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Pour la petite taille d'écran */
+@media (max-width: 768px) {
+    .certifications {
+        padding: 20px;
+    }
+
+    .certification {
+        padding: 1rem;
+    }
+
+    .certification h3 {
+        font-size: 1.3rem; /* Ajuste la taille du titre */
+    }
+
+    .certification .btn {
+        width: 100%; /* Rendre le bouton plein écran */
+        text-align: center;
+    }
+	
+.certification-logo {
+    width: 200px;          /* Largeur fixe de 200px */
+    height: 200px;         /* Hauteur fixe de 200px */
+    object-fit: contain;   /* L'image conserve ses proportions sans déformation */
+    display: block;        /* Centrer l'image */
+    margin: 0 auto;        /* Centrer horizontalement */
+    max-width: none;       /* Empêche l'image de redimensionner par rapport à son conteneur */
+    max-height: none;      /* Empêche l'image de redimensionner par rapport à son conteneur */
+}
+
+}

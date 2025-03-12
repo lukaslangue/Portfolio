@@ -1,0 +1,541 @@
+/* style.css */
+
+/* Import de la police */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f0f2f5;
+    color: #333;
+    scroll-behavior: smooth;
+    padding-top: 100px; /* Compense la hauteur du header fixe */
+
+}
+
+
+/* Header et Navigation */
+header {
+    background-color: #1E90FF;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Ajout d'un margin-top au body pour compenser le menu fixe */
+body {
+    margin-top: 80px; /* Ajusté pour compenser la hauteur du header */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0.5rem; /* Augmenté le padding pour plus d'espace */
+    max-width: 1400px; /* Augmenté la largeur maximale */
+    margin: auto;
+}
+
+.logo a {
+    color: white;
+    font-size: 2rem; /* Augmenté la taille de la police */
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.logo a:hover {
+    color: #ffeb3b;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem; /* Augmenté l'espacement entre les éléments */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem; /* Augmenté la taille de la police */
+    transition: color 0.3s, background-color 0.3s;
+    padding: 0.75rem 1.5rem; /* Augmenté le padding pour plus de clicabilité */
+    border-radius: 5px;
+    display: block;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #ffeb3b;
+    left: 50%;
+    bottom: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.nav-links a:hover {
+    color: #1E90FF;
+    background-color: white;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.burger div {
+    width: 30px; /* Augmenté la largeur des lignes */
+    height: 4px; /* Augmenté l'épaisseur des lignes */
+    background-color: white;
+    margin: 6px 0; /* Augmenté l'espacement entre les lignes */
+    transition: all 0.3s ease;
+}
+
+/* Sections */
+.section {
+    padding: 100px 20px 20px; /* Ajout de plus de padding-top pour compenser le header */
+    margin-top: -20px; /* Marge négative pour décaler visuellement la section */
+    background: linear-gradient(135deg, #ffffff, #f7f7f7); /* Dégradé du blanc vers un gris clair */
+    transition: background-color 0.3s;
+}
+
+.section:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1.5rem; /* Réduit le padding latéral */
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Titres des sections */
+.section h1 {
+    text-align: center;
+    margin-bottom: 1rem; /* Réduit la marge */
+    font-size: 2rem; /* Réduit la taille de la police */
+    color: #1E90FF;
+    position: relative;
+}
+
+.section h1::after {
+    content: '';
+    width: 30px; /* Réduit la largeur */
+    height: 3px; /* Réduit la hauteur */
+    background-color: #1E90FF;
+    display: block;
+    margin: 6px auto 0; /* Réduit la marge */
+    border-radius: 2px;
+}
+
+/* Paragraphes et autres éléments */
+.section p, 
+.section ul, 
+.section div {
+    margin-bottom: 0.8rem; /* Réduit la marge */
+    font-size: 1rem; /* Réduit la taille de la police */
+}
+
+
+/* Boutons */
+.btn {
+    display: inline-block;
+    background-color: #1E90FF;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: #187bcd;
+    transform: translateY(-2px);
+}
+/* Section CV */
+#cv {
+    padding: 50px 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+
+
+#download-cv-btn {
+    background-color: #1E90FF; /* Vert */
+    color: white;
+    font-size: 18px;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Effet au survol du bouton */
+#download-cv-btn:hover {
+    background-color: #45a049;
+}
+
+/* Effet au clic sur le bouton */
+#download-cv-btn:active {
+    background-color: #3e8e41;
+}
+
+
+/* Compétences */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.skill {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+}
+
+.skill i {
+    font-size: 2rem;
+    color: #1E90FF;
+    margin-bottom: 1rem;
+}
+
+.skill h3 {
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.certifications {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    min-height: 2000px; /* Augmente la hauteur minimale de la section */
+    padding: 40px 20px; /* Ajoute un peu de padding */
+    background-color: #f4f4f4; /* Optionnel : ajoute une couleur de fond */
+}
+
+.certification {
+    background-color: #ffffff;
+    padding: 1rem 1.5rem;
+    border-left: 5px solid #1E90FF;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1 1 300px;
+    min-width: 600px;
+}
+
+
+.certification:hover {
+    background-color: #f9f9f9;
+}
+
+.certification h3 {
+    margin-bottom: 0.5rem;
+    color: #1E90FF;
+}
+
+.certification:last-child {
+    /* Vérifiez s'il y a des propriétés qui causent le problème */
+    margin: 0; /* Par exemple, une marge différente qui cause le problème */
+    flex: 1; /* Essayez de définir une largeur spécifique */
+}
+
+/* Projets */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project {
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+}
+
+.project img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.project img:hover {
+    transform: scale(1.05);
+}
+
+.project-info {
+    padding: 1rem;
+    text-align: center;
+}
+
+.project-info h3 {
+    margin-bottom: 0.5rem;
+    color: #1E90FF;
+}
+
+.project-info p {
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.project-info .btn {
+    background-color: #1E90FF;
+}
+
+.project-info .btn:hover {
+    background-color: #187bcd;
+}
+
+/* Expériences */
+.experiences {
+    list-style: none;
+    padding-left: 0;
+}
+
+.experiences li {
+    background-color: #ffffff;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+    border-left: 5px solid #1E90FF;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: background-color 0.3s;
+}
+
+.experiences li:hover {
+    background-color: #f9f9f9;
+}
+
+.experiences h3 {
+    color: #1E90FF;
+    margin-bottom: 0.5rem;
+}
+
+/* Passions */
+.passions {
+    /* Styles spécifiques si nécessaire */
+}
+
+/* Formulaire de Contact */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #1E90FF;
+    outline: none;
+}
+
+button[type="submit"] {
+    align-self: flex-start;
+    background-color: #1E90FF;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #187bcd;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    background-color: #333333;
+    color: white;
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+.footer .social-icons {
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    color: white;
+    margin: 0 0.5rem;
+    font-size: 1.5rem; /* Augmenté la taille des icônes */
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #1E90FF;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        padding: 1rem 2rem; /* Réduit le padding sur mobile */
+    }
+
+    .nav-links {
+        position: absolute;
+        right: 0;
+        height: 100vh;
+        top: 60px;
+        background-color: #1E90FF;
+        flex-direction: column;
+        align-items: center;
+        width: 70%; /* Augmenté pour éviter compression */
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        padding-top: 2rem;
+        gap: 1.5rem; /* Augmenté l'espacement entre les éléments */
+    }
+
+    .nav-links a {
+        font-size: 1.5rem; /* Augmenté la taille de la police */
+        padding: 1rem 2rem; /* Augmenté le padding */
+    }
+
+    .nav-active {
+        transform: translateX(0%);
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .burger.toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .burger.toggle .line2 {
+        opacity: 0;
+    }
+
+    .burger.toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+.certification-page {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.logo-container {
+    margin: 20px 0;
+}
+
+.certification-logo {
+    max-width: 150px; /* Réduit la taille de l'image à 150px de largeur */
+    height: auto; /* Laisse la hauteur ajustée proportionnellement */
+    margin-bottom: 20px;
+}
+
+.certification-description {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.certification-description p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.pdf-container {
+    margin-top: 30px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.pdf-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #1E90FF;
+}
+
+/* Pour l'élément embed qui affiche le PDF */
+embed {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+} 

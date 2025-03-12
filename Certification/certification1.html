@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certification - ANSSI</title>
+    <style>
+        /* CSS intégré pour la page Certification */
+        .certification-logo {
+            width: 300px;
+            height: 300px;
+            object-fit: contain;
+            display: block;
+            margin: 0 auto;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            background-color: #f0f2f5;
+            color: #333;
+            padding-top: 100px;
+            position: relative; /* Ajouté pour la position absolue du bouton */
+        }
+
+        .certification-page {
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 1.5rem;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1E90FF;
+        }
+
+        .logo-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .certification-description {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .pdf-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .pdf-container embed {
+            width: 100%;
+            height: 600px;
+        }
+
+        /* Style pour le bouton de retour (haut à gauche) */
+        .back-button {
+            background-color: #1E90FF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            position: absolute; /* Positionné en haut à gauche */
+            top: 20px; /* Un peu d'espace depuis le haut */
+            left: 20px; /* Un peu d'espace depuis la gauche */
+            transition: background-color 0.3s;
+            text-decoration: none; /* Si c'est un lien */
+        }
+
+        .back-button:hover {
+            background-color: #187bcd;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Bouton Retour en haut à gauche -->
+    <a href="javascript:history.back()" class="back-button">Retour</a>
+
+    <!-- Section Certification -->
+    <section class="certification-page">
+        <div class="container">
+            <h1>Certification - ANSSI</h1>
+
+            <!-- Affichage du logo (image PNG) -->
+            <div class="logo-container">
+                <img src="../images/anssi.png" alt="Logo Certification" class="certification-logo">
+            </div>
+
+            <!-- Description de la certification -->
+            <div class="certification-description">
+                <p>La certification ANSSI atteste des compétences en sécurité des systèmes d'information. Elle garantit que les pratiques d'une organisation respectent des normes de cybersécurité élevées, renforçant la confiance des clients et partenaires. Elle est utile pour répondre aux exigences réglementaires et pour améliorer la sécurité des données et infrastructures.</p>
+                <p>La certification a été obtenue à la date suivante : <strong>7 Novembre 2023</strong></p>
+            </div>
+
+            <!-- Affichage du fichier PDF (certif.pdf) -->
+            <div class="pdf-container">
+                <h2>Consulter la certification PDF</h2>
+                <embed src="certifications/Certificat_ANSSI.pdf" type="application/pdf" width="100%" height="600px">
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
