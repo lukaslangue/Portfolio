@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Langue</title>
+    <link rel="stylesheet" href="../style.css">
+    <!-- Google Fonts pour une typographie moderne -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<style>
+        /* Style pour le bouton de retour (haut à gauche) */
+        .back-button {
+            background-color: #1E90FF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            position: absolute; /* Positionné en haut à gauche */
+            top: 20px; /* Un peu d'espace depuis le haut */
+            left: 20px; /* Un peu d'espace depuis la gauche */
+            transition: background-color 0.3s;
+            text-decoration: none; /* Si c'est un lien */
+        }
+
+        .back-button:hover {
+            background-color: #187bcd;
+        }
+</style>
+<body>
+    <!-- Bouton Retour en haut à gauche -->
+    <a href="javascript:history.back()" class="back-button">Retour</a>
+
+    <!-- Section Projets -->
+    <section id="projets" class="section">
+        <div class="container">
+            <h1>Projets</h1>
+            <div class="projects">
+
+                <div class="project">
+                    <img src="../images/gsblogo.png" alt="Projet 2">
+                    <div class="project-info">
+                        <h3>GSB</h3>
+						    <p><strong>Année :</strong> 2024-2025</p>
+                        <p><strong>Description :</strong> GSB est le nom du projet réalisé en deuxième année de BTS SIO. Il consiste à créér une plateforme réseau en se basant sur les recommandations de l'ANSSI </p>
+                        <a href="../Projets/gsb.html" class="btn">Voir le projet <i class="fas fa-arrow-right"></i></a>
+                    </div> 
+            </div>
+			                <div class="project">
+                    <img src="../images/logo-postfix.png" alt="Projet 2">
+                    <div class="project-info">
+                        <h3>Serveur Mail en local</h3>
+                        <p>Mise en place d'un serveur mail en local</p>
+						<p><strong>Description :</strong> J'ai du mettre en place un serveur mail en local lors de mon stage de premère année avec Postfix et Dovecot</p>
+                        <a href="../Projets/mailocal.html" class="btn">Voir le projet <i class="fas fa-arrow-right"></i></a>
+                    </div> 
+            </div>
+			
+			                <div class="project">
+                    <img src="../images/toweb.png" alt="Projet 1">
+<div class="project-info">
+    <h3>Projet ToWeb - Création du site du lycée</h3>
+    <p><strong>Année :</strong> 2022-2023</p>
+    <p><strong>Description :</strong> Dans le cadre de ce projet, j'ai utilisé l'outil ToWeb pour concevoir et réaliser un site internet pour le lycée. Cet outil m'a permis de créer un site fonctionnel, moderne et accessible, tout en facilitant la gestion du contenu et l'intégration des différentes pages du site.</p>
+    <p><strong>Objectif :</strong> L'objectif était de concevoir un site web simple, intuitif et informatif, en mettant l'accent sur l'accessibilité pour les utilisateurs. Ce projet m'a permis de développer des compétences en gestion de contenu, en conception d'interface et en optimisation pour une navigation fluide sur divers appareils.</p>
+</div>
+                </div>
+        </div>
+    </section>
+
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 - Langue. Tous droits réservés.</p>
+            <div class="social-icons">
+                <a href="https://github.com/Lucky11245"><i class="fab fa-github"></i></a>
+                <!-- Ajoute d'autres icônes de réseaux sociaux ici -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script pour la navigation responsive -->
+    <script src="script.js"></script>
+</body>
+</html>
