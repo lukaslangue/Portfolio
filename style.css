@@ -97,14 +97,13 @@ nav {
 .burger {
     display: none;
     cursor: pointer;
-    padding: 0.5rem;
 }
 
 .burger div {
-    width: 30px; /* Augmenté la largeur des lignes */
-    height: 4px; /* Augmenté l'épaisseur des lignes */
+    width: 25px;
+    height: 3px;
     background-color: white;
-    margin: 6px 0; /* Augmenté l'espacement entre les lignes */
+    margin: 5px;
     transition: all 0.3s ease;
 }
 
@@ -432,51 +431,43 @@ footer {
     to { opacity: 1; }
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    nav {
-        padding: 1rem 2rem; /* Réduit le padding sur mobile */
+/* Affichage du menu sur mobile */
+@media screen and (max-width: 768px) {
+    .burger {
+        display: block; /* Afficher le menu burger */
+        z-index: 10;
     }
 
     .nav-links {
         position: absolute;
         right: 0;
+        top: 80px;
         height: 100vh;
-        top: 60px;
+        width: 100%;
         background-color: #1E90FF;
         flex-direction: column;
         align-items: center;
-        width: 70%; /* Augmenté pour éviter compression */
-        transform: translateX(100%);
-        transition: transform 0.5s ease-in;
-        padding-top: 2rem;
-        gap: 1.5rem; /* Augmenté l'espacement entre les éléments */
+        justify-content: center;
+        display: none;
     }
 
-    .nav-links a {
-        font-size: 1.5rem; /* Augmenté la taille de la police */
-        padding: 1rem 2rem; /* Augmenté le padding */
+    .nav-links.nav-active {
+        display: flex;
     }
 
-    .nav-active {
-        transform: translateX(0%);
-    }
-
-    .burger {
-        display: block;
-    }
-
-    .burger.toggle .line1 {
+    /* Animation burger */
+    .toggle .line1 {
         transform: rotate(-45deg) translate(-5px, 6px);
     }
 
-    .burger.toggle .line2 {
+    .toggle .line2 {
         opacity: 0;
     }
 
-    .burger.toggle .line3 {
+    .toggle .line3 {
         transform: rotate(45deg) translate(-5px, -6px);
     }
+}
 .certification-page {
     padding: 50px 20px;
     background-color: #f4f4f4;

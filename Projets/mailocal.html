@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Certification - ANSSI</title>
+    <title>Projet - Serveur Mail En Local</title>
     <style>
-        /* CSS intégré pour la page Certification */
+        /* CSS intégré pour la mise en page */
         .certification-logo {
             width: 300px;
             height: 300px;
@@ -20,11 +20,7 @@
             background-color: #f0f2f5;
             color: #333;
             padding-top: 100px;
-            position: relative; /* Ajouté pour la position absolue du bouton */
-        }
-
-        .certification-page {
-            padding: 20px;
+            position: relative;
         }
 
         .container {
@@ -51,6 +47,7 @@
         .pdf-container {
             text-align: center;
             margin-top: 30px;
+            display: none; /* Caché par défaut */
         }
 
         .pdf-container embed {
@@ -58,7 +55,6 @@
             height: 600px;
         }
 
-        /* Style pour le bouton de retour (haut à gauche) */
         .back-button {
             background-color: #1E90FF;
             color: white;
@@ -67,40 +63,99 @@
             border-radius: 5px;
             cursor: pointer;
             font-size: 1rem;
-            position: absolute; /* Positionné en haut à gauche */
-            top: 20px; /* Un peu d'espace depuis le haut */
-            left: 20px; /* Un peu d'espace depuis la gauche */
+            position: absolute;
+            top: 20px;
+            left: 20px;
             transition: background-color 0.3s;
-            text-decoration: none; /* Si c'est un lien */
+            text-decoration: none;
         }
 
         .back-button:hover {
             background-color: #187bcd;
         }
 
+        .toggle-button {
+            background-color: #1E90FF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            display: block;
+            margin: 20px auto;
+            transition: background-color 0.3s;
+        }
+
+        .toggle-button:hover {
+            background-color: #187bcd;
+        }
+
+        /* Suppression des puces et numéros des listes */
+        ul, ol {
+            list-style-type: none;
+            padding: 0;
+        }
     </style>
+    <script>
+        function togglePDF() {
+            var pdfContainer = document.querySelector('.pdf-container');
+            if (pdfContainer.style.display === "none" || pdfContainer.style.display === "") {
+                pdfContainer.style.display = "block";
+            } else {
+                pdfContainer.style.display = "none";
+            }
+        }
+    </script>
 </head>
 <body>
 
-    <!-- Bouton Retour en haut à gauche -->
     <a href="javascript:history.back()" class="back-button">Retour</a>
 
-    <!-- Section Certification -->
     <section class="certification-page">
         <div class="container">
             <h1>Projet - Serveur Mail En Local</h1>
 
-            <!-- Affichage du logo (image PNG) -->
             <div class="logo-container">
-                <img src="../images/logo-postfix.png" alt="Logo Certification" class="certification-logo">
+                <img src="../images/logo-postfix.png" alt="Logo Serveur Mail" class="certification-logo">
             </div>
 
-            <!-- Description de la certification -->
             <div class="certification-description">
-                <p></p>
+                <h2>Contexte</h2>
+                <p>Dans le cadre de mon stage en BTS SIO, j'ai mis en place un <b>serveur mail en local</b> pour comprendre le fonctionnement des protocoles de messagerie.</p>
+                
+                <h2>Objectifs</h2>
+                <ul>
+                    <li>Installer et configurer un serveur mail local</li>
+                    <li>Tester l’envoi et la réception de mails</li>
+                    <li>Rédiger une documentation détaillée</li>
+                </ul>
+                
+                <h2>Technologies utilisées</h2>
+                <ul>
+                    <li>Serveur SMTP : Postfix</li>
+                    <li>Serveur IMAP/POP3 : Dovecot</li>
+                    <li>Client Webmail : Roundcube</li>
+                </ul>
+                
+                <h2>Étapes du projet</h2>
+                <ol>
+                    <li>Installation et configuration de Postfix</li>
+                    <li>Configuration de Dovecot pour la gestion des mails entrants</li>
+                    <li>Ajout des utilisateurs et tests avec un client mail</li>
+                    <li>Rédaction de la documentation technique</li>
+                </ol>
+                
+                <h2>Compétences acquises</h2>
+                <ul>
+                    <li>Compréhension des protocoles SMTP, IMAP et POP3</li>
+                    <li>Configuration d'un serveur mail sous Linux</li>
+                    <li>Diagnostic et résolution des problèmes de messagerie</li>
+                </ul>
             </div>
 
-            <!-- Affichage du fichier PDF (certif.pdf) -->
+            <button class="toggle-button" onclick="togglePDF()">Afficher/Masquer la documentation</button>
+            
             <div class="pdf-container">
                 <h2>Consulter la documentation PDF</h2>
                 <embed src="../pdf/serveur_mail.pdf" type="application/pdf" width="100%" height="1000px">
