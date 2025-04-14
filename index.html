@@ -149,39 +149,93 @@
         </div>
     </section>
 
-    <!-- Section Veille Technologique -->
+    <!-- Section Veille Technologique  -->
 <section id="veille-tech" class="section">
-    <div class="container">
+    <style>
+        /* Styles spécifiques à la section veille-tech */
+        #veille-tech {
+            background-color: #f9f9f9;
+            padding: 50px 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #veille-tech .veille-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        #veille-tech h1 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        #veille-tech .veille-project {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            border-radius: 12px;
+            background: #fff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        #veille-tech .veille-project img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        #veille-tech .veille-info {
+            flex: 1;
+        }
+
+        #veille-tech .veille-info h3 {
+            color: #007BFF;
+            margin-bottom: 10px;
+        }
+
+        #veille-tech .veille-info p {
+            margin: 10px 0;
+            line-height: 1.5;
+        }
+
+        #veille-tech .btn {
+            display: inline-block;
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        #veille-tech .btn:hover {
+            background-color: #0056b3;
+        }
+
+        #veille-tech .btn i {
+            margin-left: 6px;
+        }
+    </style>
+
+    <div class="veille-container">
         <h1>Veille Technologique</h1>
 
-        <div class="veille-description">
-            <p>La veille technologique est essentielle pour suivre les dernières tendances et innovations du secteur IT. Grâce à des outils comme ITConnect, je m'assure de rester à jour avec les dernières technologies et pratiques dans le domaine.</p>
-        </div>
-
-        <div class="veille-contenu">
-            <h2>Mes Ressources de Veille</h2>
-            <ul>
-                <li>
-                    <strong>Article récent sur l'IA et l'avenir du développement logiciel</strong> : Découvrez comment l'intelligence artificielle transforme le développement et l'automatisation des processus logiciels.
-                </li>
-                <li>
-                    <strong>Innovation en cybersécurité</strong> : Une analyse approfondie des dernières technologies en cybersécurité et leur impact sur les entreprises.
-                </li>
-                <li>
-                    <strong>Cloud Computing et Edge Computing</strong> : Un comparatif des deux technologies et leur influence sur la transformation numérique des entreprises.
-                </li>
-            </ul>
-        </div>
-
-        <div class="veille-image">
-            <img src="images/itconnect.jpg" alt="Veille Technologique - ITConnect">
-        </div>
-
-        <div class="veille-conclusion">
-            <p>Restez informé est une partie essentielle de ma pratique professionnelle. La veille technologique me permet non seulement de suivre les dernières tendances, mais aussi d’anticiper les changements dans le domaine de l'IT pour être toujours prêt à innover.</p>
+        <div class="veille-project">
+            <img src="images/itconnect.jpg" alt="ITConnect Veille Technologique">
+            <div class="veille-info">
+                <h3>Veille avec ITConnect</h3>
+                <p><strong>Objectif :</strong> Rester à jour sur les dernières innovations dans le domaine technologique en utilisant ITConnect, un outil qui centralise les informations critiques pour les professionnels de l'IT.</p>
+                <p><strong>Description :</strong> Cette section présente les principales tendances et technologies que je surveille, telles que l'intelligence artificielle, la cybersécurité, le cloud computing, et bien d'autres. Ces connaissances me permettent de rester informé et de les appliquer dans mes projets.</p>
+                <a href="https://www.it-connect.fr/actualites/" class="btn">En savoir plus <i class="fas fa-arrow-right"></i></a>
+            </div>
         </div>
     </div>
 </section>
+
 
     <!-- Section Stages & Expériences -->
 	<section id="stages" class="section">
