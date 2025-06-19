@@ -3,108 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Langue</title>
+    <title>Autres Projets - Langue</title>
     <link rel="stylesheet" href="../style.css">
-    <!-- Google Fonts pour une typographie moderne -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome pour les icônes -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-	<link rel="icon" href="images/router.png" type="image/png">
+    <link rel="icon" href="../images/router.png" type="image/png">
 </head>
-<style>
-        /* Style pour le bouton de retour (haut à gauche) */
-        .back-button {
-            background-color: #1E90FF;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1rem;
-            position: absolute; /* Positionné en haut à gauche */
-            top: 20px; /* Un peu d'espace depuis le haut */
-            left: 20px; /* Un peu d'espace depuis la gauche */
-            transition: background-color 0.3s;
-            text-decoration: none; /* Si c'est un lien */
-        }
-
-        .back-button:hover {
-            background-color: #187bcd;
-        }
-</style>
 <body>
-    <!-- Bouton Retour en haut à gauche -->
+
     <a href="javascript:history.back()" class="back-button">Retour</a>
 
-    <!-- Section Projets -->
-    <section id="projets" class="section">
+    <section class="project-page">
         <div class="container">
-            <h1>Projets</h1>
+            <h1>Autres Projets</h1>
             <div class="projects">
-
                 <div class="project">
-                    <img src="../images/gsblogo.png" alt="Projet 2">
+                    <img src="../images/docker.svg" alt="Logo Docker">
                     <div class="project-info">
-                        <h3>GSB</h3>
-						<p><strong>Année :</strong> 2024-2025</p>
-                        <p><strong>Description :</strong> GSB est le nom du projet réalisé en deuxième année de BTS SIO. Il consiste à créér une plateforme réseau en se basant sur les recommandations de l'ANSSI </p>
-                        <a href="../Projets/gsb.html" class="btn">Voir le projet <i class="fas fa-arrow-right"></i></a>
-                    </div> 
-				</div>
-						
-				<div class="project">
-                    <img src="../images/iventoy.png" alt="Projet 2">
-                    <div class="project-info">
-                        <h3>Serveur PXE (avec Iventoy) </h3>
-						<p><strong>Année :</strong> 2025</p>
-                        <p>Mise en place d'un serveur PXE</p>
-						<p><strong>Description :</strong> J'ai du mettre en place un serveur PXE lors de mon stage de deuxième année avec Iventoy</p>
-                        <a href="../Projets/iventoy.html" class="btn">Voir le projet <i class="fas fa-arrow-right"></i></a>
-                    </div> 
-				</div>
-				<div class="project">
-                    <img src="../images/Postfix_Logo.svg" alt="Projet 2">
-                    <div class="project-info">
-                        <h3>Serveur Mail en local</h3>
-						<p><strong>Année :</strong> 2024</p>
-                        <p>Mise en place d'un serveur mail en local</p>
-						<p><strong>Description :</strong> J'ai du mettre en place un serveur mail en local lors de mon stage de premère année avec Postfix et Dovecot</p>
-                        <a href="../Projets/mailocal.html" class="btn">Voir le projet <i class="fas fa-arrow-right"></i></a>
-                    </div> 
-				</div>
-				<div class="project">
-                    <img src="../images/docker.svg" alt="Projet 1">
-					<div class="project-info">
-						<h3>Projet Docker - Mise en place de docker</h3>
-						<p><strong>Année :</strong> 2025</p>
-						<p><strong>Description :</strong> Dans le cadre de mon projet de stage, j'ai utilisé Docker pour mettre en place des conteneurs</p>
-						<p><strong>Objectif :</strong> L'objectif était de simplifier le déploiement des applications. Cela a permis d'assurer un environnement stable et facile à gérer.</p>
-                        <a href="../Projets/docker.html" class="btn">Voir le projet <i class="fas fa-arrow-right"></i></a>
-					</div>
+                        <h3>Projet Docker</h3>
+                        <p><strong>Année :</strong> 2024</p>
+                        <p><strong>Description :</strong> Ce projet visait à maîtriser la conteneurisation avec Docker, une technologie essentielle pour le déploiement et la gestion d'applications.</p>
+                        <a href="docker.html" class="btn">Voir le projet <i class="fas fa-arrow-right"></i></a>
+                    </div>
                 </div>
-				<div class="project">
-                    <img src="../images/toweb.png" alt="Projet 1">
-					<div class="project-info">
-						<h3>Projet ToWeb - Création du site du lycée</h3>
-						<p><strong>Année :</strong> 2022-2023</p>
-						<p><strong>Description :</strong> Dans le cadre de ce projet, j'ai utilisé l'outil ToWeb pour concevoir et réaliser un site internet pour le lycée. Cet outil m'a permis de créer un site fonctionnel, moderne et accessible, tout en facilitant la gestion du contenu et l'intégration des différentes pages du site.</p>
-						<p><strong>Objectif :</strong> L'objectif était de concevoir un site web simple, intuitif et informatif, en mettant l'accent sur l'accessibilité pour les utilisateurs. Ce projet m'a permis de développer des compétences en gestion de contenu, en conception d'interface et en optimisation pour une navigation fluide sur divers appareils.</p>
-					</div>
+                <div class="project">
+                    <img src="../images/iventoy.png" alt="Logo iVentoy">
+                    <div class="project-info">
+                        <h3>Projet iVentoy - Serveur PXE</h3>
+                        <p><strong>Année :</strong> 2024</p>
+                        <p><strong>Description :</strong> Mise en place d'un serveur PXE avec iVentoy pour le déploiement automatisé de systèmes d'exploitation sur plusieurs machines, optimisant ainsi les processus d'installation et de gestion des parcs informatiques.</p>
+                        <a href="iventoy.html" class="btn">Voir le projet <i class="fas fa-arrow-right"></i></a>
+                    </div>
                 </div>
-			</div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 - Langue. Tous droits réservés.</p>
-            <div class="social-icons">
-                <a href="https://github.com/Lucky11245"><i class="fab fa-github"></i></a>
-                <!-- Ajoute d'autres icônes de réseaux sociaux ici -->
+                <div class="project">
+                    <img src="../images/toweb.png" alt="Projet ToWeb">
+                    <div class="project-info">
+                        <h3>Projet ToWeb - Création du site du lycée</h3>
+                        <p><strong>Année :</strong> 2022-2023</p>
+                        <p><strong>Description :</strong> Dans le cadre de ce projet, j'ai utilisé l'outil ToWeb pour concevoir et réaliser un site internet pour le lycée. Cet outil m'a permis de créer un site fonctionnel, moderne et accessible, tout en facilitant la gestion du contenu et l'intégration des différentes pages du site.</p>
+                        <p><strong>Objectif :</strong> L'objectif était de concevoir un site web simple, intuitif et informatif, en mettant l'accent sur l'accessibilité pour les utilisateurs. Ce projet m'a permis de développer des compétences en gestion de contenu, en conception d'interface et en optimisation pour une navigation fluide sur divers appareils.</p>
+                    </div>
+                </div>
             </div>
         </div>
-    </footer>
+    </section>
 
-    <!-- Script pour la navigation responsive -->
-    <script src="script.js"></script>
 </body>
 </html>

@@ -1,10 +1,10 @@
 <p align="center">
-  <a href="https://lucky11245.github.io/Portfolio/" target="_blank"><img width="100" src="https://lucky11245.github.io/Portfolio/images/Router.png" alt="Logo de mon Portfolio"></a>
+  <a href="https://lukaslangue.github.io/Portfolio/" target="_blank"><img width="100" src="https://lucky11245.github.io/Portfolio/images/Router.png" alt="Logo de mon Portfolio"></a>
 </p>
 
 <p align="center">
-  <a href="https://lucky11245.github.io/Portfolio/"><img src="https://img.shields.io/badge/visiter%20le%20portfolio-%20-%23ff5733.svg?style=flat-square" alt="Visiter le portfolio"></a>
-  <a href="https://github.com/Lucky11245"><img src="https://img.shields.io/github/followers/Lucky11245.svg?style=flat-square&logo=github&label=Suivre" alt="Suivre sur GitHub"></a>
+  <a href="https://lukaslangue.github.io/Portfolio/"><img src="https://img.shields.io/badge/visiter%20le%20portfolio-%20-%23ff5733.svg?style=flat-square" alt="Visiter le portfolio"></a>
+  <a href="https://github.com/lukaslangue"><img src="https://img.shields.io/github/followers/lukaslangue.svg?style=flat-square&logo=github&label=Suivre" alt="Suivre sur GitHub"></a>
 </p>
 
 ## A propos
@@ -15,7 +15,7 @@ Je suis passionné par l'administration et la gestion des réseaux informatiques
 📧 Contactez-moi : [lukas.langue@gmail.com](mailto:lukas.langue@gmail.com)
 
 ## Portfolio
-Vous pouvez consulter l'intégralité de mes projets sur mon portfolio ou sur mon [Internet](https://lucky11245.github.io/Portfolio/).
+Vous pouvez consulter l'intégralité de mes projets sur mon portfolio ou sur mon [Internet](https://lukaslangue.github.io/Portfolio/).
 
 ## Contribuer
 

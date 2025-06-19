@@ -3,133 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" href="images/router.png" type="image/png">
+    <link rel="icon" href="../images/router.png" type="image/png">
     <title>Projet - Serveur Mail En Local</title>
-    <style>
-        /* CSS intégré pour la mise en page */
-        .certification-logo {
-            width: 300px;
-            height: 300px;
-            object-fit: contain;
-            display: block;
-            margin: 0 auto;
-        }
-
-        body {
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
-            background-color: #f0f2f5;
-            color: #333;
-            padding-top: 100px;
-            position: relative;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 0 1.5rem;
-        }
-
-        h1 {
-            text-align: center;
-            color: #1E90FF;
-        }
-
-        .logo-container {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .certification-description {
-            text-align: center;
-            margin: 20px 0;
-        }
-
-        .pdf-container {
-            text-align: center;
-            margin-top: 30px;
-            display: none; /* Caché par défaut */
-        }
-
-        .pdf-container embed {
-            width: 100%;
-            height: 600px;
-        }
-
-        .back-button {
-            background-color: #1E90FF;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1rem;
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            transition: background-color 0.3s;
-            text-decoration: none;
-        }
-
-        .back-button:hover {
-            background-color: #187bcd;
-        }
-
-        .toggle-button {
-            background-color: #1E90FF;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1rem;
-            display: block;
-            margin: 20px auto;
-            transition: background-color 0.3s;
-        }
-
-        .toggle-button:hover {
-            background-color: #187bcd;
-        }
-
-        /* Suppression des puces et numéros des listes */
-        ul, ol {
-            list-style-type: none;
-            padding: 0;
-        }
-    </style>
-    <script>
-        function togglePDF() {
-            var pdfContainer = document.querySelector('.pdf-container');
-            if (pdfContainer.style.display === "none" || pdfContainer.style.display === "") {
-                pdfContainer.style.display = "block";
-            } else {
-                pdfContainer.style.display = "none";
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
     <a href="javascript:history.back()" class="back-button">Retour</a>
 
-    <section class="certification-page">
+    <section class="project-page">
         <div class="container">
-            <h1>Projet - Serveur Mail En Local</h1>
-
+            <h1>Projet - Serveur Mail en Local</h1>
             <div class="logo-container">
-                <img src="../images/logo-postfix.png" alt="Logo Serveur Mail" class="certification-logo">
+                <img src="../images/Postfix_Logo.svg" alt="Logo Postfix" class="project-logo">
             </div>
-
-            <div class="certification-description">
-                <h2>Contexte</h2>
-                <p>Dans le cadre de mon stage en BTS SIO, j'ai mis en place un <b>serveur mail en local</b> pour comprendre le fonctionnement des protocoles de messagerie.</p>
+            <div class="project-description">
+                <h2>Contexte du projet</h2>
+                <p>Lors de mon stage de première année, j'ai eu l'opportunité de mettre en place un serveur de messagerie en local. Ce projet a été crucial pour comprendre le fonctionnement des services de messagerie et pour acquérir des compétences pratiques en administration système sous Linux.</p>
                 
                 <h2>Objectifs</h2>
                 <ul>
-                    <li>Installer et configurer un serveur mail local</li>
-                    <li>Tester l’envoi et la réception de mails</li>
-                    <li>Rédiger une documentation détaillée</li>
+                    <li>Installer et configurer Postfix pour l'envoi de mails</li>
+                    <li>Configurer Dovecot pour la réception des mails via IMAP/POP3</li>
+                    <li>Mettre en place un client webmail (Roundcube)</li>
+                    <li>Assurer la sécurité de la messagerie</li>
+                    <li>Rédiger une documentation technique détaillée</li>
                 </ul>
                 
                 <h2>Technologies utilisées</h2>
@@ -155,14 +55,23 @@
                 </ul>
             </div>
 
-            <button class="toggle-button" onclick="togglePDF()">Afficher/Masquer la documentation</button>
+            <button class="btn" onclick="togglePDF('mailocal-pdf')">Afficher/Masquer la documentation</button>
             
-            <div class="pdf-container">
-                <h2>Consulter la documentation PDF</h2>
-                <embed src="../pdf/serveur_mail.pdf" type="application/pdf" width="100%" height="1000px">
+            <div id="mailocal-pdf" class="pdf-container" style="display:none;"> <h2>Consulter la documentation PDF</h2>
+                <embed src="../pdf/serveur_mail.pdf" type="application/pdf" width="100%" height="600px">
             </div>
         </div>
     </section>
 
+    <script>
+        function togglePDF(id) {
+            let pdfContainer = document.getElementById(id);
+            if (pdfContainer.style.display === "none" || pdfContainer.style.display === "") {
+                pdfContainer.style.display = "block";
+            } else {
+                pdfContainer.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>

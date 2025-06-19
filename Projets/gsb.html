@@ -3,169 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" href="images/router.png" type="image/png">
+    <link rel="icon" href="../images/router.png" type="image/png">
     <title>Projet - GSB</title>
-    <style>
-        /* Styles de la page */
-        .certification-logo {
-            width: 300px;
-            height: 300px;
-            object-fit: contain;
-            display: block;
-            margin: 0 auto;
-        }
-
-        body {
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
-            background-color: #f0f2f5;
-            color: #333;
-            padding-top: 100px;
-            position: relative;
-        }
-
-        .certification-page {
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 0 1.5rem;
-        }
-
-        h1 {
-            text-align: center;
-            color: #1E90FF;
-        }
-
-        .logo-container {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .certification-description {
-            text-align: center;
-            margin: 20px 0;
-        }
-
-        /* Boutons pour afficher les PDFs */
-        .button-container {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-
-        button {
-            padding: 10px;
-            font-size: 16px;
-            cursor: pointer;
-            border: none;
-            background-color: #007BFF;
-            color: white;
-            border-radius: 5px;
-        }
-
-        button:hover {
-            background-color: #0056b3;
-        }
-
-        /* Conteneur des PDFs */
-        .pdf-container {
-            display: none;
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        iframe {
-            width: 80%;
-            height: 600px;
-            border: 1px solid #ddd;
-        }
-
-        /* Style pour le bouton de retour */
-        .back-button {
-            background-color: #1E90FF;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1rem;
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            transition: background-color 0.3s;
-            text-decoration: none;
-        }
-
-        .back-button:hover {
-            background-color: #187bcd;
-        }
-		        /* Suppression des puces et numéros des listes */
-        ul, ol {
-            list-style-type: none;
-            padding: 0;
-        }
-    </style>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- Bouton Retour -->
     <a href="javascript:history.back()" class="back-button">Retour</a>
 
-    <!-- Section Certification -->
-    <section class="certification-page">
+    <section class="project-page">
         <div class="container">
             <h1>Projet - GSB</h1>
-
-            <!-- Logo -->
             <div class="logo-container">
-                <img src="../images/gsblogo.png" alt="Logo Certification" class="certification-logo">
+                <img src="../images/gsblogo.png" alt="Logo GSB" class="project-logo">
             </div>
-
-            <!-- Description -->
-            <div class="certification-description">
-                            </div>
-
-            <div class="certification-description">
-                <h2>Description du projet</h2>
-                <p>GSB est un projet réalisé en deuxième année de BTS SIO. Il consiste à créer une plateforme réseau en se basant sur les recommandations de l’ANSSI.</p>
+            <div class="project-description">
+                <h2>Contexte du projet</h2>
+                <p>Le projet GSB (Galaxy Swiss Bourdin) a été réalisé dans le cadre de ma deuxième année de BTS SIO. Il s'agissait de concevoir et de mettre en œuvre une infrastructure réseau sécurisée et conforme aux recommandations de l'ANSSI (Agence Nationale de la Sécurité des Systèmes d'Information) pour une entreprise fictive.</p>
 
                 <h2>Objectifs</h2>
                 <ul>
-                    <li>Mettre en place une infrastructure réseau sécurisée</li>
-                    <li>Appliquer les recommandations de l’ANSSI</li>
-                    <li>Configurer des équipements et sécuriser les flux</li>
+                    <li>Concevoir une architecture réseau robuste et sécurisée</li>
+                    <li>Implémenter les services essentiels (Active Directory, DHCP, DNS)</li>
+                    <li>Mettre en œuvre des mesures de cybersécurité (pare-feu, VPN, VLAN)</li>
+                    <li>Rédiger une documentation technique complète</li>
                 </ul>
 
                 <h2>Technologies utilisées</h2>
                 <ul>
-                    <li>Firewall : Opnsense</li>
+                    <li>Virtualisation : Proxmox</li>
+                    <li>Pare-feu : pfSense</li>
                     <li>Serveur : Windows Server & Linux</li>
                     <li>Protocoles : VLAN, Active Directory</li>
                 </ul>
             </div>
-            </div>
 
-            <!-- Boutons pour afficher les PDFs -->
             <div class="button-container">
-                <button onclick="togglePDF('pdf1')">Schéma Réseau.pdf</button>
-                <button onclick="togglePDF('pdf2')">Mission.pdf</button>
-                <button onclick="togglePDF('pdf3')">Powershell.pdf</button>
+                <button class="btn" onclick="togglePDF('pdf1')">Schéma Réseau.pdf</button>
+                <button class="btn" onclick="togglePDF('pdf2')">Mission.pdf</button>
+                <button class="btn" onclick="togglePDF('pdf3')">Powershell.pdf</button>
             </div>
 
-            <!-- Conteneurs des PDFs -->
-            <div id="pdf1" class="pdf-container">
+            <div id="pdf1" class="pdf-container" style="display:none;">
+                <h2>Schéma Réseau GSB</h2>
                 <iframe src="../pdf/Schéma_Réseau_GSB.pdf"></iframe>
             </div>
             
-            <div id="pdf2" class="pdf-container">
+            <div id="pdf2" class="pdf-container" style="display:none;">
+                <h2>Mission du Projet</h2>
                 <iframe src="../pdf/Mission2Langue.pdf"></iframe>
             </div>
 
-            <div id="pdf3" class="pdf-container">
+            <div id="pdf3" class="pdf-container" style="display:none;">
+                <h2>Compte Rendu PowerShell</h2>
                 <iframe src="../pdf/CR_Powershell.pdf"></iframe>
             </div>
         </div>
@@ -173,17 +65,18 @@
 
     <script>
         function togglePDF(id) {
-            let pdfs = document.querySelectorAll('.pdf-container');
+            let pdfs = document.querySelectorAll('.pdf-container'); // Sélectionne tous les conteneurs de PDF
 
             pdfs.forEach(pdf => {
                 if (pdf.id === id) {
+                    // Si c'est le PDF cliqué, on le bascule (afficher/masquer)
                     pdf.style.display = (pdf.style.display === "block") ? "none" : "block";
                 } else {
+                    // Sinon, on masque les autres PDF
                     pdf.style.display = "none";
                 }
             });
         }
     </script>
-
 </body>
 </html>

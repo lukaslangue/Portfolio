@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/router.png" type="image/png">
+    <title>Projet - Homelab</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <a href="javascript:history.back()" class="back-button">Retour</a>
+
+    <section class="project-page">
+        <div class="container">
+            <h1>Projet - Homelab (Raspberry Pi & Docker)</h1>
+            <div class="logo-container">
+                <img src="../images/Raspberry_Pi_logo.svg" alt="Logo Raspberry Pi" class="project-logo">
+            </div>
+            <div class="project-description">
+                <h2>Contexte du projet</h2>
+                <p>Ce projet vise à créer un environnement de laboratoire personnel ("Homelab") à la maison, basé sur un Raspberry Pi. L'objectif est d'héberger plusieurs services auto-hébergés via Docker, accessibles de manière sécurisée via un VPN.</p>
+
+                <h2>Composants et Services</h2>
+                <ul>
+                    <li><strong>Raspberry Pi :</strong> Serveur principal pour l'hébergement Docker.</li>
+                    <li><strong>Docker :</strong> Plateforme de conteneurisation pour déployer et gérer les services.</li>
+                    <li><strong>VPN (WireGuard/OpenVPN) :</strong> Pour un accès sécurisé et distant aux services internes du Homelab.</li>
+                    <li><strong>Nextcloud :</strong> Solution de cloud personnel pour le stockage et la synchronisation de fichiers.</li>
+                    <li><strong>Jellyfin :</strong> Serveur multimédia personnel pour le streaming de films, séries et musique.</li>
+                    <li><strong>Portainer :</strong> Interface graphique pour la gestion simplifiée des conteneurs Docker.</li>
+                    <li><strong>Site web personnel :</strong> Un portail centralisé pour accéder et gérer tous les services du Homelab, incluant des liens vers Nextcloud, Jellyfin, etc.</li>
+                </ul>
+
+                <h2>Objectifs du projet</h2>
+                <ul>
+                    <li>Déployer Docker sur Raspberry Pi.</li>
+                    <li>Mettre en place un serveur VPN pour un accès sécurisé.</li>
+                    <li>Installer et configurer Nextcloud pour le stockage de fichiers.</li>
+                    <li>Installer et configurer Jellyfin pour le streaming multimédia.</li>
+                    <li>Utiliser Portainer pour la gestion visuelle des conteneurs.</li>
+                    <li>Créer un site web simple pour centraliser l'accès aux services.</li>
+                    <li>Apprendre les bonnes pratiques de sécurité et de gestion des services auto-hébergés.</li>
+                </ul>
+
+                <h2>Compétences développées</h2>
+                <ul>
+                    <li>Administration système sous Linux (Raspberry Pi OS).</li>
+                    <li>Maîtrise de Docker et Docker Compose.</li>
+                    <li>Configuration de réseaux VPN.</li>
+                    <li>Déploiement et gestion de services web (Nextcloud, Jellyfin).</li>
+                    <li>Sécurité des systèmes auto-hébergés.</li>
+                    <li>Gestion de projets personnels d'infrastructure.</li>
+                </ul>
+            </div>
+            
+            </div>
+    </section>
+
+    <script>
+        // Fonction pour afficher/masquer le PDF (si vous en ajoutez un plus tard)
+        function togglePDF(id) {
+            let pdfContainer = document.getElementById(id);
+            if (pdfContainer.style.display === "none" || pdfContainer.style.display === "") {
+                pdfContainer.style.display = "block";
+            } else {
+                pdfContainer.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

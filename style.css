@@ -1,8 +1,24 @@
-/* style.css */
+/* style.css - Version 3.0: Raffiné et Optimisé */
 
-/* Import de la police */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/* Import des polices Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@700&display=swap');
 
+:root {
+    /* Nouvelle palette de couleurs */
+    --primary-color: #2c3e50;    /* Bleu nuit profond pour les titres et éléments importants */
+    --accent-color: #3498db;     /* Bleu ciel pour les accents et interactions */
+    --text-color: #333;          /* Gris foncé pour le texte principal */
+    --light-text-color: #666;    /* Gris clair pour le texte secondaire/description */
+    --background-color-light: #f4f6f9; /* Fond très clair pour les sections */
+    --background-color-mid: #e0e6ed;   /* Fond légèrement plus foncé pour alternance */
+    --background-color-dark: #34495e;  /* Fond sombre pour le header/footer */
+    --border-color: #d1d9e6;     /* Couleur des bordures et séparateurs */
+    --card-background: #ffffff;  /* Fond des cartes et conteneurs */
+    --shadow-light: rgba(0, 0, 0, 0.08); /* Ombre légère pour profondeur */
+    --shadow-medium: rgba(0, 0, 0, 0.15); /* Ombre plus prononcée au survol */
+}
+
+/* Réinitialisation de base */
 * {
     margin: 0;
     padding: 0;
@@ -11,522 +27,595 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    font-weight: 400;
     line-height: 1.6;
-    background-color: #f0f2f5;
-    color: #333;
+    color: var(--text-color);
+    background-color: var(--background-color-light);
     scroll-behavior: smooth;
-    padding-top: 100px; /* Compense la hauteur du header fixe */
-
+    padding-top: 70px; /* Compense la hauteur du header fixe */
 }
 
+/* Conteneur global */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem; /* Padding réduit sur les côtés */
+}
+
+/* Sections générales */
+.section {
+    padding: 60px 0; /* Padding vertical légèrement réduit */
+    text-align: center;
+    position: relative;
+}
+
+.section:nth-of-type(even) {
+    background-color: var(--background-color-mid); /* Alternance de couleur de fond */
+}
+
+/* Titres */
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem; /* Taille de police légèrement réduite */
+    color: var(--primary-color);
+    margin-bottom: 35px;
+    font-weight: 700;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem; /* Taille de police légèrement réduite */
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.35rem; /* Taille de police légèrement réduite */
+    color: var(--text-color);
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+p {
+    font-size: 0.95rem; /* Taille de police légèrement réduite */
+    margin-bottom: 15px;
+    color: var(--light-text-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent-color);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-color);
+}
 
 /* Header et Navigation */
 header {
-    background-color: #1E90FF;
+    background-color: var(--background-color-dark);
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-/* Ajout d'un margin-top au body pour compenser le menu fixe */
-body {
-    margin-top: 80px; /* Ajusté pour compenser la hauteur du header */
+    box-shadow: 0 3px 10px var(--shadow-light);
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 0.5rem; /* Augmenté le padding pour plus d'espace */
-    max-width: 1400px; /* Augmenté la largeur maximale */
-    margin: auto;
+    padding: 0.8rem 1rem;
 }
 
 .logo a {
-    color: white;
-    font-size: 2rem; /* Augmenté la taille de la police */
-    font-weight: bold;
-    text-decoration: none;
-    transition: color 0.3s;
+    color: var(--card-background); /* Blanc */
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem; /* Taille de police légèrement réduite */
+    font-weight: 700;
+    transition: color 0.3s ease;
 }
 
 .logo a:hover {
-    color: #ffeb3b;
+    color: var(--accent-color);
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 2rem; /* Augmenté l'espacement entre les éléments */
+}
+
+.nav-links li {
+    margin-left: 25px; /* Espacement réduit */
 }
 
 .nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem; /* Augmenté la taille de la police */
-    transition: color 0.3s, background-color 0.3s;
-    padding: 0.75rem 1.5rem; /* Augmenté le padding pour plus de clicabilité */
-    border-radius: 5px;
-    display: block;
+    color: var(--card-background);
+    font-size: 0.95rem; /* Taille de police légèrement réduite */
+    padding: 5px 0;
     position: relative;
+    opacity: 0.8;
+}
+
+.nav-links a:hover {
+    opacity: 1;
+    color: var(--accent-color);
 }
 
 .nav-links a::after {
     content: '';
     position: absolute;
-    width: 0%;
+    width: 0;
     height: 2px;
-    background-color: #ffeb3b;
-    left: 50%;
-    bottom: 10px;
-    transition: all 0.3s ease-in-out;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: var(--accent-color);
+    transition: width 0.3s ease, background-color 0.3s ease;
 }
 
 .nav-links a:hover::after {
     width: 100%;
     left: 0;
+    background: var(--accent-color);
 }
 
-.nav-links a:hover {
-    color: #1E90FF;
-    background-color: white;
-}
-
+/* Burger Menu (Mobile) */
 .burger {
     display: none;
     cursor: pointer;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 28px; /* Taille légèrement réduite */
+    height: 18px; /* Taille légèrement réduite */
+    z-index: 1001;
 }
 
 .burger div {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 5px;
+    width: 100%;
+    height: 2px; /* Epaisseur réduite */
+    background-color: var(--card-background);
+    border-radius: 5px;
     transition: all 0.3s ease;
 }
 
-/* Sections */
-.section {
-    padding: 100px 20px 20px; /* Ajout de plus de padding-top pour compenser le header */
-    margin-top: -20px; /* Marge négative pour décaler visuellement la section */
-    background: linear-gradient(135deg, #ffffff, #f7f7f7); /* Dégradé du blanc vers un gris clair */
-    transition: background-color 0.3s;
-}
-
-.section:nth-child(even) {
-    background-color: #ffffff;
-}
-
-.container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 1.5rem; /* Réduit le padding latéral */
-    animation: fadeIn 1s ease-in-out;
-}
-
-/* Titres des sections */
-.section h1 {
-    text-align: center;
-    margin-bottom: 1rem; /* Réduit la marge */
-    font-size: 2rem; /* Réduit la taille de la police */
-    color: #1E90FF;
-    position: relative;
-}
-
-.section h1::after {
-    content: '';
-    width: 30px; /* Réduit la largeur */
-    height: 3px; /* Réduit la hauteur */
-    background-color: #1E90FF;
-    display: block;
-    margin: 6px auto 0; /* Réduit la marge */
-    border-radius: 2px;
-}
-
-/* Paragraphes et autres éléments */
-.section p, 
-.section ul, 
-.section div {
-    margin-bottom: 0.8rem; /* Réduit la marge */
-    font-size: 1rem; /* Réduit la taille de la police */
-}
-
-
-/* Boutons */
+/* Boutons génériques */
 .btn {
     display: inline-block;
-    background-color: #1E90FF;
-    color: white;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 5px;
+    background-color: var(--accent-color);
+    color: var(--card-background);
+    padding: 10px 20px; /* Padding réduit */
+    border-radius: 6px; /* Bords légèrement moins arrondis */
     text-decoration: none;
-    font-size: 1rem;
-    transition: background-color 0.3s, transform 0.3s;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem; /* Taille de police réduite */
+    margin-top: 15px;
 }
 
 .btn:hover {
-    background-color: #187bcd;
-    transform: translateY(-2px);
+    background-color: var(--primary-color);
+    transform: translateY(-1px); /* Moins de mouvement */
+    box-shadow: 0 4px 10px var(--shadow-medium);
 }
-/* Section CV */
-#cv {
-    padding: 50px 0;
-    background-color: #f4f4f4;
+
+.btn i {
+    margin-left: 6px;
+}
+
+/* Styles pour les grilles (Compétences, Projets, Certifications) */
+.skills, .projects, .certification-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Taille min réduite */
+    gap: 25px; /* Espacement réduit */
+    margin-top: 35px;
+}
+
+.skill, .project, .certification {
+    background-color: var(--card-background);
+    padding: 25px; /* Padding réduit */
+    border-radius: 10px; /* Bords légèrement moins arrondis */
+    box-shadow: 0 4px 12px var(--shadow-light);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
     text-align: center;
+    border: 1px solid var(--border-color); /* Ajout d'une bordure subtile */
 }
 
-
-
-#download-cv-btn {
-    background-color: #1E90FF; /* Vert */
-    color: white;
-    font-size: 18px;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-/* Effet au survol du bouton */
-#download-cv-btn:hover {
-    background-color: #45a049;
-}
-
-/* Effet au clic sur le bouton */
-#download-cv-btn:active {
-    background-color: #3e8e41;
-}
-
-
-/* Compétences */
-.skills {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-}
-
-.skill {
-    background-color: #ffffff;
-    padding: 1.5rem;
-    border-radius: 10px;
-    width: 250px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.skill:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+.skill:hover, .project:hover, .certification:hover {
+    transform: translateY(-5px); /* Moins de mouvement */
+    box-shadow: 0 8px 20px var(--shadow-medium);
 }
 
 .skill i {
-    font-size: 2rem;
-    color: #1E90FF;
-    margin-bottom: 1rem;
+    font-size: 2.5rem; /* Taille d'icône réduite */
+    color: var(--accent-color);
+    margin-bottom: 15px;
 }
 
 .skill h3 {
-    margin-bottom: 0.5rem;
-    color: #333;
-}
-
-.certifications {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-    min-height: 2000px; /* Augmente la hauteur minimale de la section */
-    padding: 40px 20px; /* Ajoute un peu de padding */
-    background-color: #f4f4f4; /* Optionnel : ajoute une couleur de fond */
-}
-
-.certification {
-    background-color: #ffffff;
-    padding: 1rem 1.5rem;
-    border-left: 5px solid #1E90FF;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    flex: 1 1 300px;
-    min-width: 600px;
-}
-
-
-.certification:hover {
-    background-color: #f9f9f9;
-}
-
-.certification h3 {
-    margin-bottom: 0.5rem;
-    color: #1E90FF;
-}
-
-.certification:last-child {
-    /* Vérifiez s'il y a des propriétés qui causent le problème */
-    margin: 0; /* Par exemple, une marge différente qui cause le problème */
-    flex: 1; /* Essayez de définir une largeur spécifique */
-}
-
-/* Projets */
-.projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.project {
-    background-color: #ffffff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.project:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+    margin-bottom: 8px;
 }
 
 .project img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    transition: transform 0.3s;
-}
-
-.project img:hover {
-    transform: scale(1.05);
+    max-width: 100%;
+    height: 160px; /* Hauteur réduite pour les images de projet */
+    object-fit: contain;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    border: 1px solid var(--border-color);
 }
 
 .project-info {
-    padding: 1rem;
-    text-align: center;
-}
-
-.project-info h3 {
-    margin-bottom: 0.5rem;
-    color: #1E90FF;
+    text-align: left;
 }
 
 .project-info p {
-    margin-bottom: 1rem;
-    color: #555;
+    font-size: 0.88rem; /* Taille de police réduite */
+    color: var(--light-text-color);
 }
 
-.project-info .btn {
-    background-color: #1E90FF;
+.project-info p strong {
+    color: var(--primary-color);
 }
 
-.project-info .btn:hover {
-    background-color: #187bcd;
-}
-
-/* Expériences */
+/* Section Stages & Expériences */
 .experiences {
     list-style: none;
-    padding-left: 0;
+    text-align: left;
+    max-width: 750px; /* Largeur max réduite */
+    margin: 35px auto 0;
 }
 
 .experiences li {
-    background-color: #ffffff;
-    padding: 1rem 1.5rem;
-    margin-bottom: 1rem;
-    border-left: 5px solid #1E90FF;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    transition: background-color 0.3s;
+    background-color: var(--card-background);
+    padding: 25px; /* Padding réduit */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px var(--shadow-light);
+    margin-bottom: 25px; /* Espacement réduit */
+    position: relative;
+    border-left: 4px solid var(--accent-color); /* Bordure accentuée */
 }
 
-.experiences li:hover {
-    background-color: #f9f9f9;
+.experiences li h3 {
+    color: var(--primary-color);
+    margin-bottom: 8px;
 }
 
-.experiences h3 {
-    color: #1E90FF;
-    margin-bottom: 0.5rem;
+.experiences li p {
+    font-size: 0.9rem; /* Taille de police réduite */
+    color: var(--light-text-color);
 }
 
-/* Passions */
-.passions {
-    /* Styles spécifiques si nécessaire */
-}
-
-/* Formulaire de Contact */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+/* Section Contact */
+#contact .container {
+    max-width: 550px; /* Largeur max réduite */
 }
 
 .form-group {
-    display: flex;
-    flex-direction: column;
+    margin-bottom: 18px; /* Espacement réduit */
+    text-align: left;
 }
 
 .form-group label {
-    margin-bottom: 0.5rem;
-    color: #333;
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: var(--primary-color);
+    font-size: 0.9rem; /* Taille de police réduite */
 }
 
-.form-group input,
+.form-group input[type="text"],
+.form-group input[type="email"],
 .form-group textarea {
-    padding: 0.75rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-    transition: border-color 0.3s;
+    width: 100%;
+    padding: 10px; /* Padding réduit */
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 0.9rem; /* Taille de police réduite */
+    font-family: 'Roboto', sans-serif;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.form-group input:focus,
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
 .form-group textarea:focus {
-    border-color: #1E90FF;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2); /* Ombre plus douce */
     outline: none;
 }
 
-button[type="submit"] {
-    align-self: flex-start;
-    background-color: #1E90FF;
-    color: white;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-button[type="submit"]:hover {
-    background-color: #187bcd;
-    transform: translateY(-2px);
+.form-group textarea {
+    resize: vertical;
 }
 
 /* Footer */
 footer {
-    background-color: #333333;
-    color: white;
-    padding: 1.5rem 0;
+    background-color: var(--background-color-dark);
+    color: var(--card-background);
+    padding: 25px 0; /* Padding réduit */
     text-align: center;
+    box-shadow: 0 -3px 10px var(--shadow-light);
 }
 
-.footer .social-icons {
-    margin-top: 1rem;
+footer p {
+    margin-bottom: 12px;
+    font-size: 0.85rem; /* Taille de police réduite */
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .social-icons a {
-    color: white;
-    margin: 0 0.5rem;
-    font-size: 1.5rem; /* Augmenté la taille des icônes */
-    transition: color 0.3s;
+    color: var(--card-background);
+    font-size: 1.4rem; /* Taille d'icône réduite */
+    margin: 0 8px; /* Espacement réduit */
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .social-icons a:hover {
-    color: #1E90FF;
+    color: var(--accent-color);
+    transform: translateY(-2px);
 }
 
-/* Animations */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+/* Veille Technologique */
+#veille-tech {
+    background-color: var(--background-color-light);
+    padding: 50px 0;
 }
 
-/* Affichage du menu sur mobile */
-@media screen and (max-width: 768px) {
-    .burger {
-        display: block; /* Afficher le menu burger */
-        z-index: 10;
-    }
-
-    .nav-links {
-        position: absolute;
-        right: 0;
-        top: 80px;
-        height: 100vh;
-        width: 100%;
-        background-color: #1E90FF;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        display: none;
-    }
-
-    .nav-links.nav-active {
-        display: flex;
-    }
-
-    /* Animation burger */
-    .toggle .line1 {
-        transform: rotate(-45deg) translate(-5px, 6px);
-    }
-
-    .toggle .line2 {
-        opacity: 0;
-    }
-
-    .toggle .line3 {
-        transform: rotate(45deg) translate(-5px, -6px);
-    }
+#veille-tech .veille-container {
+    max-width: 900px; /* Largeur légèrement réduite */
+    margin: 0 auto;
+    padding: 20px;
 }
-.certification-page {
-    padding: 50px 20px;
-    background-color: #f4f4f4;
+
+#veille-tech h1 {
+    text-align: center;
+    margin-bottom: 35px;
+    color: var(--primary-color);
+}
+
+.veille-project {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    padding: 25px;
+    border-radius: 10px;
+    background: var(--card-background);
+    box-shadow: 0 4px 12px var(--shadow-light);
+    margin-bottom: 25px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.veille-project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px var(--shadow-medium);
+}
+
+.veille-project img {
+    width: 180px; /* Taille d'image réduite */
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.veille-info {
+    flex: 1;
+    text-align: left;
+}
+
+.veille-info h3 {
+    color: var(--primary-color);
+    margin-bottom: 8px;
+}
+
+.veille-info p {
+    font-size: 0.9rem; /* Taille de police réduite */
+    margin: 8px 0;
+    line-height: 1.5;
+}
+
+/* Styles pour les pages de certification/projet (certification1.html, etc.) */
+.back-button {
+    display: inline-block; /* Assure que padding et margin fonctionnent comme prévu */
+    background-color: var(--primary-color); /* Couleur de fond définie par la variable */
+    color: var(--card-background); /* Texte blanc */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    position: fixed; /* Reste fixe lors du défilement */
+    top: 20px;
+    left: 20px;
+    z-index: 1000; /* Assure qu'il est au-dessus des autres éléments */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Ajout de box-shadow pour la transition */
+    text-decoration: none; /* Enlève le soulignement si c'est un lien <a> */
+    font-weight: 500; /* Un peu plus épais pour la lisibilité */
+    box-shadow: 0 2px 5px var(--shadow-light); /* Ombre légère par défaut */
+}
+
+.back-button:hover {
+    background-color: var(--accent-color); /* Changement de couleur au survol */
+    transform: translateY(-1px); /* Léger soulèvement */
+    box-shadow: 0 4px 10px var(--shadow-medium); /* Ombre plus prononcée au survol */
+}
+
+
+.certification-page, .project-page {
+    padding: 80px 1rem 40px; /* Padding ajusté pour ces pages */
+    background-color: var(--background-color-light);
     text-align: center;
 }
 
-.container {
-    max-width: 1200px;
+.certification-page .container, .project-page .container {
+    max-width: 900px;
     margin: 0 auto;
 }
 
-h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #333;
+.certification-page h1, .project-page h1 {
+    font-size: 2.2rem; /* Taille de titre ajustée */
+    margin-bottom: 25px;
+    color: var(--primary-color);
 }
 
 .logo-container {
-    margin: 20px 0;
+    margin: 25px 0;
 }
 
 .certification-logo {
-    max-width: 150px; /* Réduit la taille de l'image à 150px de largeur */
-    height: auto; /* Laisse la hauteur ajustée proportionnellement */
-    margin-bottom: 20px;
-}
-
-.certification-description {
-    background-color: white;
-    padding: 20px;
+    max-width: 200px; /* Taille ajustée pour les logos */
+    height: auto;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    margin: 0 auto;
+    box-shadow: 0 4px 10px var(--shadow-light);
+    border: 1px solid var(--border-color);
 }
 
-.certification-description p {
-    font-size: 1.1rem;
-    color: #333;
+.project-logo { /* Nouvelle classe si un logo spécifique est utilisé pour les projets */
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px var(--shadow-light);
+    border: 1px solid var(--border-color);
+}
+
+
+.certification-description, .project-description {
+    background-color: var(--card-background);
+    padding: 25px; /* Padding réduit */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px var(--shadow-light);
+    margin-bottom: 30px;
+    text-align: left;
+    line-height: 1.7;
+    border: 1px solid var(--border-color);
+    font-size: 0.92rem; /* Taille de police légèrement réduite */
+}
+
+.certification-description p strong, .project-description p strong {
+    color: var(--primary-color);
 }
 
 .pdf-container {
-    margin-top: 30px;
-    background-color: white;
+    margin-top: 25px;
+    background-color: var(--card-background);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px var(--shadow-light);
+    overflow: hidden;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
 }
 
 .pdf-container h2 {
-    font-size: 1.5rem;
+    color: var(--primary-color);
     margin-bottom: 20px;
-    color: #1E90FF;
+    font-size: 1.6rem; /* Taille de titre PDF ajustée */
 }
 
-/* Pour l'élément embed qui affiche le PDF */
-embed {
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.pdf-container embed, .pdf-container iframe {
+    width: 100%;
+    height: 600px; /* Hauteur ajustée pour le PDF */
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
 }
 
-} 
+.button-container {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 12px; /* Espace réduit entre les boutons */
+    flex-wrap: wrap;
+}
+
+.button-container button {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.button-container button:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px var(--shadow-medium);
+}
+
+
+/* Responsivité générale */
+@media (max-width: 768px) {
+    body {
+        padding-top: 60px;
+    }
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.6rem; }
+    h3 { font-size: 1.2rem; }
+    p { font-size: 0.9rem; }
+    .section { padding: 40px 0; }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.7rem 1rem;
+    }
+    .logo a { font-size: 1.5rem; }
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        margin-top: 15px;
+        display: none;
+    }
+    .nav-links li { margin: 10px 0; }
+    .nav-links a { font-size: 0.88rem; }
+    .burger {
+        display: flex;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+    }
+    .nav-active { display: flex; }
+
+    .skills, .projects, .certification-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .skill, .project, .certification, .experiences li {
+        padding: 20px;
+    }
+    .project img { height: 140px; }
+
+    .veille-project {
+        flex-direction: column;
+        text-align: center;
+    }
+    .veille-project img {
+        margin-bottom: 15px;
+        width: 150px;
+        height: 150px;
+    }
+    .veille-info { text-align: center; }
+
+    .certification-page, .project-page {
+        padding: 70px 0.8rem 30px;
+    }
+    .certification-page h1, .project-page h1 { font-size: 1.8rem; }
+    .certification-description, .project-description { padding: 20px; }
+    .pdf-container embed, .pdf-container iframe { height: 400px; }
+    .button-container { gap: 10px; }
+}
+
+/* Animation burger */
+.toggle .line1 { transform: rotate(-45deg) translate(-5px, 5px); }
+.toggle .line2 { opacity: 0; }
+.toggle .line3 { transform: rotate(45deg) translate(-5px, -5px); }
