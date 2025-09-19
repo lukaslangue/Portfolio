@@ -1,10 +1,8 @@
-/* style.css - Version 3.0: Raffiné et Optimisé */
-
 /* Import des polices Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@700&display=swap');
 
 :root {
-    /* Nouvelle palette de couleurs */
+    /* Palette de couleurs */
     --primary-color: #2c3e50;    /* Bleu nuit profond pour les titres et éléments importants */
     --accent-color: #3498db;     /* Bleu ciel pour les accents et interactions */
     --text-color: #333;          /* Gris foncé pour le texte principal */
@@ -14,8 +12,8 @@
     --background-color-dark: #34495e;  /* Fond sombre pour le header/footer */
     --border-color: #d1d9e6;     /* Couleur des bordures et séparateurs */
     --card-background: #ffffff;  /* Fond des cartes et conteneurs */
-    --shadow-light: rgba(0, 0, 0, 0.08); /* Ombre légère pour profondeur */
-    --shadow-medium: rgba(0, 0, 0, 0.15); /* Ombre plus prononcée au survol */
+    --shadow-light: rgba(0, 0, 0, 0.08); 
+    --shadow-medium: rgba(0, 0, 0, 0.15);
 }
 
 /* Réinitialisation de base */
@@ -32,31 +30,31 @@ body {
     color: var(--text-color);
     background-color: var(--background-color-light);
     scroll-behavior: smooth;
-    padding-top: 70px; /* Compense la hauteur du header fixe */
+    padding-top: 70px;
 }
 
 /* Conteneur global */
 .container {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 0 1rem; /* Padding réduit sur les côtés */
+    padding: 0 1rem; 
 }
 
 /* Sections générales */
 .section {
-    padding: 60px 0; /* Padding vertical légèrement réduit */
+    padding: 60px 0;
     text-align: center;
     position: relative;
 }
 
 .section:nth-of-type(even) {
-    background-color: var(--background-color-mid); /* Alternance de couleur de fond */
+    background-color: var(--background-color-mid);
 }
 
 /* Titres */
 h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 2.5rem; /* Taille de police légèrement réduite */
+    font-size: 2.5rem; 
     color: var(--primary-color);
     margin-bottom: 35px;
     font-weight: 700;
@@ -64,7 +62,7 @@ h1 {
 
 h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 2rem; /* Taille de police légèrement réduite */
+    font-size: 2rem; 
     color: var(--primary-color);
     margin-bottom: 25px;
     font-weight: 700;
@@ -72,14 +70,14 @@ h2 {
 
 h3 {
     font-family: 'Roboto', sans-serif;
-    font-size: 1.35rem; /* Taille de police légèrement réduite */
+    font-size: 1.35rem; 
     color: var(--text-color);
     margin-bottom: 15px;
     font-weight: 500;
 }
 
 p {
-    font-size: 0.95rem; /* Taille de police légèrement réduite */
+    font-size: 0.95rem; 
     margin-bottom: 15px;
     color: var(--light-text-color);
 }
@@ -114,7 +112,7 @@ nav {
 .logo a {
     color: var(--card-background); /* Blanc */
     font-family: 'Playfair Display', serif;
-    font-size: 1.6rem; /* Taille de police légèrement réduite */
+    font-size: 1.6rem; 
     font-weight: 700;
     transition: color 0.3s ease;
 }
@@ -129,12 +127,12 @@ nav {
 }
 
 .nav-links li {
-    margin-left: 25px; /* Espacement réduit */
+    margin-left: 25px; 
 }
 
 .nav-links a {
     color: var(--card-background);
-    font-size: 0.95rem; /* Taille de police légèrement réduite */
+    font-size: 0.95rem; 
     padding: 5px 0;
     position: relative;
     opacity: 0.8;
@@ -169,14 +167,14 @@ nav {
     cursor: pointer;
     flex-direction: column;
     justify-content: space-around;
-    width: 28px; /* Taille légèrement réduite */
-    height: 18px; /* Taille légèrement réduite */
+    width: 28px; 
+    height: 18px;
     z-index: 1001;
 }
 
 .burger div {
     width: 100%;
-    height: 2px; /* Epaisseur réduite */
+    height: 2px; 
     background-color: var(--card-background);
     border-radius: 5px;
     transition: all 0.3s ease;
@@ -187,20 +185,20 @@ nav {
     display: inline-block;
     background-color: var(--accent-color);
     color: var(--card-background);
-    padding: 10px 20px; /* Padding réduit */
-    border-radius: 6px; /* Bords légèrement moins arrondis */
+    padding: 10px 20px;
+    border-radius: 6px; 
     text-decoration: none;
     font-weight: 500;
     transition: all 0.3s ease;
     border: none;
     cursor: pointer;
-    font-size: 0.9rem; /* Taille de police réduite */
+    font-size: 0.9rem;
     margin-top: 15px;
 }
 
 .btn:hover {
     background-color: var(--accent-color);
-    transform: translateY(-1px); /* Moins de mouvement */
+    transform: translateY(-1px);
     box-shadow: 0 4px 10px var(--shadow-medium);
 }
 
@@ -211,28 +209,28 @@ nav {
 /* Styles pour les grilles (Compétences, Projets, Certifications) */
 .skills, .projects, .certification-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Taille min réduite */
-    gap: 25px; /* Espacement réduit */
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
+    gap: 25px;
     margin-top: 35px;
 }
 
 .skill, .project, .certification {
     background-color: var(--card-background);
-    padding: 25px; /* Padding réduit */
-    border-radius: 10px; /* Bords légèrement moins arrondis */
+    padding: 25px; 
+    border-radius: 10px;
     box-shadow: 0 4px 12px var(--shadow-light);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     text-align: center;
-    border: 1px solid var(--border-color); /* Ajout d'une bordure subtile */
+    border: 1px solid var(--border-color);
 }
 
 .skill:hover, .project:hover, .certification:hover {
-    transform: translateY(-5px); /* Moins de mouvement */
+    transform: translateY(-5px);
     box-shadow: 0 8px 20px var(--shadow-medium);
 }
 
 .skill i {
-    font-size: 2.5rem; /* Taille d'icône réduite */
+    font-size: 2.5rem;
     color: var(--accent-color);
     margin-bottom: 15px;
 }
@@ -243,7 +241,7 @@ nav {
 
 .project img {
     max-width: 100%;
-    height: 160px; /* Hauteur réduite pour les images de projet */
+    height: 160px; 
     object-fit: contain;
     border-radius: 6px;
     margin-bottom: 15px;
@@ -255,7 +253,7 @@ nav {
 }
 
 .project-info p {
-    font-size: 0.88rem; /* Taille de police réduite */
+    font-size: 0.88rem; 
     color: var(--light-text-color);
 }
 
@@ -267,18 +265,18 @@ nav {
 .experiences {
     list-style: none;
     text-align: left;
-    max-width: 750px; /* Largeur max réduite */
+    max-width: 750px;
     margin: 35px auto 0;
 }
 
 .experiences li {
     background-color: var(--card-background);
-    padding: 25px; /* Padding réduit */
+    padding: 25px;
     border-radius: 10px;
     box-shadow: 0 4px 12px var(--shadow-light);
-    margin-bottom: 25px; /* Espacement réduit */
+    margin-bottom: 25px; 
     position: relative;
-    border-left: 4px solid var(--accent-color); /* Bordure accentuée */
+    border-left: 4px solid var(--accent-color); 
 }
 
 .experiences li h3 {
@@ -287,17 +285,17 @@ nav {
 }
 
 .experiences li p {
-    font-size: 0.9rem; /* Taille de police réduite */
+    font-size: 0.9rem;
     color: var(--light-text-color);
 }
 
 /* Section Contact */
 #contact .container {
-    max-width: 550px; /* Largeur max réduite */
+    max-width: 550px; 
 }
 
 .form-group {
-    margin-bottom: 18px; /* Espacement réduit */
+    margin-bottom: 18px; 
     text-align: left;
 }
 
@@ -306,17 +304,17 @@ nav {
     margin-bottom: 6px;
     font-weight: 500;
     color: var(--primary-color);
-    font-size: 0.9rem; /* Taille de police réduite */
+    font-size: 0.9rem; 
 }
 
 .form-group input[type="text"],
 .form-group input[type="email"],
 .form-group textarea {
     width: 100%;
-    padding: 10px; /* Padding réduit */
+    padding: 10px; 
     border: 1px solid var(--border-color);
     border-radius: 6px;
-    font-size: 0.9rem; /* Taille de police réduite */
+    font-size: 0.9rem;
     font-family: 'Roboto', sans-serif;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
@@ -325,7 +323,7 @@ nav {
 .form-group input[type="email"]:focus,
 .form-group textarea:focus {
     border-color: var(--accent-color);
-    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2); /* Ombre plus douce */
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2); 
     outline: none;
 }
 
@@ -337,21 +335,21 @@ nav {
 footer {
     background-color: var(--background-color-dark);
     color: var(--card-background);
-    padding: 25px 0; /* Padding réduit */
+    padding: 25px 0;
     text-align: center;
     box-shadow: 0 -3px 10px var(--shadow-light);
 }
 
 footer p {
     margin-bottom: 12px;
-    font-size: 0.85rem; /* Taille de police réduite */
+    font-size: 0.85rem; 
     color: rgba(255, 255, 255, 0.8);
 }
 
 .social-icons a {
     color: var(--card-background);
-    font-size: 1.4rem; /* Taille d'icône réduite */
-    margin: 0 8px; /* Espacement réduit */
+    font-size: 1.4rem;
+    margin: 0 8px;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
@@ -367,7 +365,7 @@ footer p {
 }
 
 #veille-tech .veille-container {
-    max-width: 900px; /* Largeur légèrement réduite */
+    max-width: 900px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -398,7 +396,7 @@ footer p {
 }
 
 .veille-project img {
-    width: 180px; /* Taille d'image réduite */
+    width: 180px;
     height: 180px;
     object-fit: cover;
     border-radius: 8px;
@@ -416,40 +414,40 @@ footer p {
 }
 
 .veille-info p {
-    font-size: 0.9rem; /* Taille de police réduite */
+    font-size: 0.9rem;
     margin: 8px 0;
     line-height: 1.5;
 }
 
 /* Styles pour les pages de certification/projet (certification1.html, etc.) */
 .back-button {
-    display: inline-block; /* Assure que padding et margin fonctionnent comme prévu */
-    background-color: var(--primary-color); /* Couleur de fond définie par la variable */
-    color: var(--card-background); /* Texte blanc */
+    display: inline-block; 
+    background-color: var(--primary-color); 
+    color: var(--card-background);
     padding: 10px 20px;
     border: none;
     border-radius: 6px;
     cursor: pointer;
     font-size: 0.9rem;
-    position: fixed; /* Reste fixe lors du défilement */
+    position: fixed; 
     top: 20px;
     left: 20px;
-    z-index: 1000; /* Assure qu'il est au-dessus des autres éléments */
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Ajout de box-shadow pour la transition */
-    text-decoration: none; /* Enlève le soulignement si c'est un lien <a> */
-    font-weight: 500; /* Un peu plus épais pour la lisibilité */
-    box-shadow: 0 2px 5px var(--shadow-light); /* Ombre légère par défaut */
+    z-index: 1000; 
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; 
+    text-decoration: none; 
+    font-weight: 500; 
+    box-shadow: 0 2px 5px var(--shadow-light); 
 }
 
 .back-button:hover {
-    background-color: var(--accent-color); /* Changement de couleur au survol */
-    transform: translateY(-1px); /* Léger soulèvement */
-    box-shadow: 0 4px 10px var(--shadow-medium); /* Ombre plus prononcée au survol */
+    background-color: var(--accent-color); 
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px var(--shadow-medium); 
 }
 
 
 .certification-page, .project-page {
-    padding: 80px 1rem 40px; /* Padding ajusté pour ces pages */
+    padding: 80px 1rem 40px; 
     background-color: var(--background-color-light);
     text-align: center;
 }
@@ -460,7 +458,7 @@ footer p {
 }
 
 .certification-page h1, .project-page h1 {
-    font-size: 2.2rem; /* Taille de titre ajustée */
+    font-size: 2.2rem;
     margin-bottom: 25px;
     color: var(--primary-color);
 }
@@ -470,14 +468,14 @@ footer p {
 }
 
 .certification-logo {
-    max-width: 200px; /* Taille ajustée pour les logos */
+    max-width: 200px;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 10px var(--shadow-light);
     border: 1px solid var(--border-color);
 }
 
-.project-logo { /* Nouvelle classe si un logo spécifique est utilisé pour les projets */
+.project-logo { 
     max-width: 200px;
     height: auto;
     border-radius: 8px;
@@ -488,14 +486,14 @@ footer p {
 
 .certification-description, .project-description {
     background-color: var(--card-background);
-    padding: 25px; /* Padding réduit */
+    padding: 25px;
     border-radius: 10px;
     box-shadow: 0 5px 15px var(--shadow-light);
     margin-bottom: 30px;
     text-align: left;
     line-height: 1.7;
     border: 1px solid var(--border-color);
-    font-size: 0.92rem; /* Taille de police légèrement réduite */
+    font-size: 0.92rem; 
 }
 
 .certification-description p strong, .project-description p strong {
@@ -515,12 +513,12 @@ footer p {
 .pdf-container h2 {
     color: var(--primary-color);
     margin-bottom: 20px;
-    font-size: 1.6rem; /* Taille de titre PDF ajustée */
+    font-size: 1.6rem; 
 }
 
 .pdf-container embed, .pdf-container iframe {
     width: 100%;
-    height: 600px; /* Hauteur ajustée pour le PDF */
+    height: 600px; 
     border: 1px solid var(--border-color);
     border-radius: 6px;
 }
@@ -529,7 +527,7 @@ footer p {
     margin-top: 25px;
     display: flex;
     justify-content: center;
-    gap: 12px; /* Espace réduit entre les boutons */
+    gap: 12px; 
     flex-wrap: wrap;
 }
 
