@@ -15,7 +15,7 @@ Je suis passionné par l'administration et la gestion des réseaux informatiques
 📧 Contactez-moi : [lukas.langue@gmail.com](mailto:lukas.langue@gmail.com)
 
 ## Portfolio
-Vous pouvez consulter l'intégralité de mes projets sur mon portfolio ou sur mon site [Internet](https://lukaslangue.github.io/Portfolio/).
+Vous pouvez consulter l'intégralité de mes projets sur mon [portfolio](https://lukaslangue.github.io/Portfolio/).
 
 ## Contribuer
 
